@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_02_13_152123) do
   create_table "reflections", force: :cascade do |t|
     t.integer "week"
     t.string "topic"
-    t.string "reaction"
+    t.text "reaction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

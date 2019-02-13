@@ -3,7 +3,7 @@ class CreateReflections < ActiveRecord::Migration[5.2]
     create_table :reflections do |t|
       t.integer :week
       t.string :topic
-      t.string :reaction
+      t.text :reaction
 
       t.timestamps
     end
