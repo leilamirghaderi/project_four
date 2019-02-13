@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_13_150821) do
+ActiveRecord::Schema.define(version: 2019_02_13_152123) do
+
+  create_table "reflections", force: :cascade do |t|
+    t.integer "week"
+    t.string "topic"
+    t.string "reaction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "students", force: :cascade do |t|
     t.string "firstname"

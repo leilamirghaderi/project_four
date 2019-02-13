@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  week: 1
+  topic: MyString
+  reaction: MyString
+
+two:
+  week: 1
+  topic: MyString
+  reaction: MyString
