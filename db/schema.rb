@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_220512) do
+ActiveRecord::Schema.define(version: 2019_02_15_222314) do
 
   create_table "reflections", force: :cascade do |t|
     t.integer "week"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 2019_02_15_220512) do
   create_table "students", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
-    t.string "studentID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
