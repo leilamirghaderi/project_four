@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_222314) do
+ActiveRecord::Schema.define(version: 2019_02_15_224730) do
 
   create_table "reflections", force: :cascade do |t|
     t.integer "week"
-    t.string "topic"
     t.text "reaction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "interesting_key_words"
     t.integer "student_id"
+    t.string "title"
     t.index ["student_id"], name: "index_reflections_on_student_id"
   end
 
