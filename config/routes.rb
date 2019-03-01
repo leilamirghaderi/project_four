@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'reflection/week:integer'
-  get 'reflection/reaction:text'
-  get 'reflection/title:string'
+  resources :reflections, constraints: { id: /\d+/ }
+ # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ root 'reflections#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
