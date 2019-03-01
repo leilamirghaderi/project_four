@@ -5,7 +5,7 @@ class CourseTest < ActiveSupport::TestCase
     @religion = reflections(:religion)
   end
 
-  test "week must be two digits, now or in the future" do
+  test "week must be digits, now or in the future" do
     current_week = Date.today.cweek
     assert_operator 2, :>=, @religion.week.to_s.length
     @religion.week = 2222
