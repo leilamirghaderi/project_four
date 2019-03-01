@@ -1,11 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  firstname: MyString
-  lastname: MyString
-  studentID: MyString
+leila:
+  firstname: Leila
+  lastname: Mirghaderi
 
-two:
-  firstname: MyString
-  lastname: MyString
-  studentID: MyString
+
+mehrdad:
+  firstname: Mehrdad
+  lastname: Sheikholeslami
