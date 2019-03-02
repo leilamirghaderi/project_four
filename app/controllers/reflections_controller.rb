@@ -69,6 +69,6 @@ class ReflectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reflection_params
-      params.fetch(:reflection, {})
+      params.require(:reflection).permit(:week, :title,  :reaction)
     end
 end
