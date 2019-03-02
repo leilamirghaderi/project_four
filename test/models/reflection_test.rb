@@ -5,7 +5,7 @@ class CourseTest < ActiveSupport::TestCase
     @religion = reflections(:religion)
   end
 
-  test "week must be digits, now or in the future" do
+  test "week must be a digit, now or in the future" do
     current_week = Date.today.cweek
     assert_operator 2, :>=, @religion.week.to_s.length
     @religion.week = 2222
@@ -28,7 +28,7 @@ class CourseTest < ActiveSupport::TestCase
     @religion.save
     assert @religion.valid?
   end
-  test "reaction should'nt be more than five hundred words" do
+  test "reaction should have content" do
     @reflections = reflections(:religion)
     @reflections.reaction = "The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be."
     assert_not @reflections.valid?
