@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Student.destroy_all
+Reflection.destroy_all
 @leila = Student.create(
   firstname: 'Leila',
   lastname: 'Mirghaderi'
@@ -15,14 +18,15 @@
   lastname: 'Sheikholeslami'
 )
 
-@china = Reflection.create(
-  week: 1,
+@one = Reflection.create(
+  week: 12,
   title: 'Globalization of China',
   reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.'
+
 )
 
-@religion = Reflection.create(
-  week: 1,
+@two = Reflection.create(
+  week: 14,
   title: 'Globalization and Religion',
   reaction: 'The twenty-first century is witnessing a resurgence and globalization of religion.'
 )

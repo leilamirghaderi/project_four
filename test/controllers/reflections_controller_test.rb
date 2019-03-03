@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @reflection = reflections(:china)
+    @reflection = reflections(:one)
   end
 
   test "should get index" do
@@ -16,7 +16,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create reflection" do
-    assert_difference('Reflection.count') do
+      assert_difference('Reflection.count') do
       post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction } }
     end
 
