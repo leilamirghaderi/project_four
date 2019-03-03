@@ -6,5 +6,6 @@ class ReflectionTest < ActiveSupport::TestCase
      assert Reflection.errors[:reaction].any?
      assert Reflection.errors[:title].any?
      assert Reflection.errors[:week].any?
+     assert Reflection.errors[:student_id].any?
   end
 end

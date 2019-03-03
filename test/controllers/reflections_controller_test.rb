@@ -17,7 +17,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create reflection" do
     assert_difference('Reflection.count') do
-      post reflections_url, params: { reflection: { week: 14, title: 'Globalization of China', reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.' } }
+      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_id: @reflection.student_id } }
     end
 
     assert_redirected_to reflection_url(Reflection.last)
@@ -34,7 +34,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update reflection" do
-    patch reflection_url(@reflection), params: { reflection: { week: 14, title: 'Globalization Update of China', reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.' } }
+    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_id: @reflection.student_id } }
     assert_redirected_to reflection_url(@reflection)
   end
 
