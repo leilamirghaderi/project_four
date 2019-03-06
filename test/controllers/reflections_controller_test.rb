@@ -17,7 +17,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create reflection" do
     assert_difference('Reflection.count') do
-      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_id: @reflection.student_id } }
+      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_id: @reflection.student.id } }
     end
 
     assert_redirected_to reflection_url(Reflection.last)
@@ -34,7 +34,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update reflection" do
-    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_id: @reflection.student_id } }
+    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_id: @reflection.student.id } }
     assert_redirected_to reflection_url(@reflection)
   end
 
