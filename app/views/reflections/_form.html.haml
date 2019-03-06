@@ -1,0 +1,11 @@
+= form_with(model: reflection, local: true) do |form|
+  - if reflection.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(reflection.errors.count, "error")
+        prohibited this reflection from being saved:
+      %ul
+        - reflection.errors.full_messages.each do |message|
+          %li= message
+  .actions
+    = form.submit
