@@ -2,8 +2,8 @@
 
 %article
   %h3= @reflection.title
-  %p.byline= @reflection.student.name
-  = @reflection.content
+  %p.byline= @reflection.student.id
+  = @reflection.reaction
   %ul.controls
     %li= link_to 'Edit', edit_reflection_path(@reflection)
     %li= link_to 'Destroy', @reflection, method: :delete, data: { confirm: 'Are you sure?' }
