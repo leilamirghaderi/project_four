@@ -5,7 +5,8 @@ class Reflection < ApplicationRecord
   numericality: { integer_only: true, greater_than_or_equal_to: 1 }
 
   def student_name=(name)
-    self.student = Student.find_or_create_by(name: name)
+    name_parts = name.split(' ')
+    self.student = Student.find_or_create_by(firstname: name_parts[0], lastname: name_parts[1])
   end
 
   def student_name
