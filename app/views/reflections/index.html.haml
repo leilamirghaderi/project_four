@@ -9,8 +9,9 @@
     %li
       %article
         %h3= link_to reflection.title, reflection
-        %p.byline= reflection.student.id
+        %p.byline= reflection.student_name
         = reflection.reaction
+        = reflection.week
         %ul.controls
           %li= link_to 'Edit', edit_reflection_path(reflection)
           %li= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' }
