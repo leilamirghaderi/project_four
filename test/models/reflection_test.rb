@@ -21,5 +21,25 @@ class ReflectionTest < ActiveSupport::TestCase
   @reflection.save
   assert_equal @reflection.student_name, students(:leila).name
   end
+  # setup do
+  #   @one = reflections(:one)
+  # end
+  #
+  # test "reflection is not valid without a unique name" do
+  #   @two = reflections(:two)
+  #   @one.name = @two.name
+  #   assert @one.invalid?
+  # end
+  #
+  # test "week must be positive" do
+  #   @one.week = -1
+  #   assert @one.invalid?
+  #
+  #   @one.week = 0
+  #   assert @one.invalid?
+  #
+  #    @one.week = 1
+  #   assert @one.valid?
+  # end
 
 end
