@@ -7,3 +7,35 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* stylelint-enable */
 
 /* Begin site styles below */
+
+// Site-wide variables
+$primary_color: #ff0000;
+$base_font_size: 20px;
+
+// Site-wide function
+@function px-to-em($target,$context:$base_font_size) {
+  @return ($target / $context) * 1em;
+}
+
+
+// @function typographic_scale($ratio,$interval,$base:$base_font_size) {
+//  @return  $base * ($ratio ^ $interval) * 1px;
+// }
+/* Base Styles (HTML Selectors) */
+
+
+html {
+  font-size: px-to-em($base_font_size,16px); /* 20 / 16 = 1.25 */
+  color: $primary_color;
+  line-height: px_to_em(24px);
+}
+h1 {
+  font-size: px-to-em(45px);
+  line-height: px_to_em(48px, 45px);
+}
+
+/* Layout Styles (Usually Landmark ID Selectors) */
+
+/* Modular Styles (Repeating Class Selectors) */
+
+ /* State Styles (JavaScript-Dependent Styles, Media Queries) */

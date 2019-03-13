@@ -25,9 +25,9 @@ class ReflectionTest < ActiveSupport::TestCase
   #   @one = reflections(:one)
   # end
   #
-  # test "reflection is not valid without a unique name" do
+  # test "reflection is not valid without a unique title" do
   #   @two = reflections(:two)
-  #   @one.name = @two.name
+  #   @one.title = @two.title
   #   assert @one.invalid?
   # end
   #
