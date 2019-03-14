@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 // Site-wide variables
-$primary_color: #ffffff;
+$primary_color: #333A56;
 $base_font_size: 20px;
 
 // Site-wide function
@@ -29,7 +29,7 @@ html {
   color: $primary_color;
   line-height: px_to_em(24px);
   font: 100% Helvetica, sans-serif;
-  background-color: #efefef;
+  background-color: #F7F5E6;
 }
 h1 {
   font-size: px-to-em(35px);
@@ -40,18 +40,29 @@ h3 {
   font-size: px-to-em(22px);
   line-height: px_to_em(22px, 24px);
   font-weight: bold;
+  color: #333A56;
+  padding-top: 1em;
 }
 ul {
-  margin: 0;
-  padding: 0.5em;
+  margin: 0.5em;
+  padding: 1em;
   list-style: none;
+
+
 }
 
-li { display: inline-block; }
+li { display: inline-block;
+  color: #F7F5E6;
+    background-color: #333A56;
+      border-radius: 1em;
+      margin: 0.5em;
+      width: 100%;
+    box-sizing: border-box;
+ }
 
 a {
   display: block;
-  padding: 6px 12px;
+  padding: 3px 9px;
   text-decoration: none;
   color: #ffffff;
 }
@@ -59,9 +70,9 @@ footer {
   font-size: px-to-em(14px);
   padding-top: 2em;
 }
-article {
-  background-color: #000000;
-}
+
+
+
 /* Layout Styles (Usually Landmark ID Selectors) */
 
 /* Modular Styles (Repeating Class Selectors) */
