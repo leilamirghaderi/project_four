@@ -41,5 +41,11 @@ class ReflectionTest < ActiveSupport::TestCase
   #    @one.week = 1
   #   assert @one.valid?
   # end
-
+  # test "reflection title must be unique on a given week and reaction" do
+  #   @one = reflections(:one)
+  #   # Duplicate the app reflection's title and identifier from HCI
+  #   @one.reaction = reflections(:two).reaction
+  #   @one.title = reflections(:two).title
+  #   assert_not @one.valid?
+  # end
 end
