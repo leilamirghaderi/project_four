@@ -40,6 +40,7 @@ h1 {
   font-size: px-to-em(35px);
   line-height: px-to-em(38px, 35px);
   padding: px-to-em(10px);
+  font-weight: bold;
 }
 h3 {
   font-size: px-to-em(22px);
@@ -86,6 +87,11 @@ p {
 /* Layout Styles (Usually Landmark ID Selectors) */
 
 /* Modular Styles (Repeating Class Selectors) */
+.code a {
+  color: #76323F;
+  font-size: px-to-em(30px);
+  font-weight: bold;
+}
 .tagline{
   margin-left: px-to-em(5px);
   font-size: px-to-em(22px);
