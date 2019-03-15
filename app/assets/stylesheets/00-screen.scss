@@ -34,7 +34,7 @@ html {
   margin: px-to-em(10px);
 }
 h2 {
-  padding-left: px-to-em(26px);
+  padding-left: px-to-em(25px);
 }
 h1 {
   font-size: px-to-em(35px);
@@ -44,43 +44,43 @@ h1 {
 }
 h3 {
   font-size: px-to-em(22px);
-  line-height: px-to-em(22px, 24px);
+  line-height: px-to-em(22px, 25px);
   font-weight: bold;
   color: #333A56;
-  padding-top: px-to-em(18px);
-  padding-bottom: px-to-em(18px);
-  padding-left: px-to-em(18px);
+  padding-top: px-to-em(15px);
+  padding-bottom: px-to-em(15px);
+  padding-left: px-to-em(15px);
 }
 ul {
-  margin: px-to-em(12px);
-  padding: px-to-em(6px);
+  margin: px-to-em(15px);
+  padding: px-to-em(5px);
   list-style: none;
 }
 li {
-  font-size: px-to-em(22px);
-  line-height: px-to-em(30px, 22px);
+  font-size: px-to-em(20px);
+  line-height: px-to-em(30px, 20px);
   display: inline-block;
   color: #D9B310;
   background-color: #333A56;
-  border-radius: px-to-em(18px);
-  margin: px-to-em(9px);
-  padding-left: px-to-em(12px);
+  border-radius: px-to-em(15px);
+  margin: px-to-em(10px);
+  padding-left: px-to-em(15px);
   padding-top: px-to-em(5px);
   width: 100%;
   box-sizing: border-box;
 }
 a {
   display: block;
-  padding: px-to-em(3px, 9px);
+  padding: px-to-em(5px, 10px);
   text-decoration: none;
   color: #C5C1C0;
 }
 footer {
-  font-size: px-to-em(14px);
-  padding-top: px-to-em(36px);
+  font-size: px-to-em(15px);
+  padding-top: px-to-em(35px);
 }
 p {
-  padding: px-to-em(24px, 26px);
+  padding: px-to-em(25px, 25px);
 }
 
 
@@ -94,7 +94,7 @@ p {
 }
 .tagline{
   margin-left: px-to-em(5px);
-  font-size: px-to-em(22px);
+  font-size: px-to-em(20px);
 }
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
  @media screen and (min-width: 380px) {
@@ -104,25 +104,25 @@ p {
 }
 @media screen and (min-width: 540px) {
  html {
-   margin: px-to-em(38px);
+   margin: px-to-em(35px);
  }
 }
 @media screen and (min-width: 920px) {
   html {
-    margin: px-to-em(40px);
-    font-size: px-to-em(28px);
+    margin: px-to-em(35px);
+    font-size: px-to-em(25px);
   }
   h1 {
-    font-size: px-to-em(40px);
+    font-size: px-to-em(35px);
   }
 }
 
 @media screen and (min-width: 1200px) {
   html {
-    margin: px-to-em(48px);
-    font-size: px-to-em(28px);
+    margin: px-to-em(50px);
+    font-size: px-to-em(25px);
   }
   h1 {
-    font-size: px-to-em(40px);
+    font-size: px-to-em(35px);
   }
 }
