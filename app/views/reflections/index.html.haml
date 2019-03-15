@@ -2,7 +2,7 @@
 
 %header
   %h2 Latest reflections
-  %p= link_to 'New Reflection', new_reflection_path
+  %p{:class => "code"}= link_to 'New Reflection', new_reflection_path
 
 %ul.reflections
   - @reflections.each do |reflection|
