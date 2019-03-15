@@ -11,7 +11,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 // Site-wide variables
 $primary_color: #333A56;
 $base_font_size: 20px;
-
+$font-stack: Helvetica, sans-serif;
 // Site-wide function
 @function px-to-em($target,$context:$base_font_size) {
   @return ($target / $context) * 1em;
@@ -28,50 +28,59 @@ html {
   font-size: px-to-em($base_font_size,16px); /* 20 / 16 = 1.25 */
   color: $primary_color;
   line-height: px_to_em(24px);
-  font: 100% Helvetica, sans-serif;
-  background-color: #F7F5E6;
+  background-color: #D9B310;
+  font: 100% $font-stack;
+  margin: px_to_em(10px);
+}
+title {
+
 }
 h1 {
   font-size: px-to-em(35px);
   line-height: px_to_em(38px, 35px);
-  padding: 0;
+  padding: px_to_em(10px);
 }
 h3 {
   font-size: px-to-em(22px);
   line-height: px_to_em(22px, 24px);
   font-weight: bold;
   color: #333A56;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 1em;
+  padding-top: px_to_em(18px);
+  padding-bottom: px_to_em(18px);
+  padding-left: px_to_em(18px);
 }
 ul {
-  margin: 0.5em;
-  padding: 0.3em;
+  margin: px_to_em(12px);
+  padding: px_to_em(6px);
   list-style: none;
 }
 li { display: inline-block;
-  color: #F7F5E6;
+  color: #D9B310;
   background-color: #333A56;
-  border-radius: 1em;
-  margin: 0.5em;
-  padding-left: 0.7em;
-  padding-top: 0.05em;
+  border-radius: px_to_em(18px);
+  margin: px_to_em(9px);
+  padding-left: px_to_em(12px);
+  padding-top: px_to_em(5px);
   width: 100%;
   box-sizing: border-box;
 }
 a {
   display: block;
-  padding: 3px 9px;
+  padding: px_to_em(3px, 9px);
   text-decoration: none;
-  color: #ffffff;
+  color: #C5C1C0;
 }
 footer {
   font-size: px-to-em(14px);
-  padding-top: 2em;
+  padding-top: px_to_em(36px);
 }
-
-
+p {
+  padding: px_to_em(24px, 26px);
+}
+.tagline{
+  margin-left: px_to_em(5px);
+  font-size: px_to_em(22px);
+}
 
 /* Layout Styles (Usually Landmark ID Selectors) */
 
