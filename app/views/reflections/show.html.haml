@@ -1,10 +1,12 @@
 %p#notice= notice
 
-%article
+  %article
   %h3= @reflection.title
-  %p.byline= @reflection.student.name
-  = @reflection.reaction
-  = @reflection.week
+  %ul.info
+    %li= @reflection.student.name
+    %li= @reflection.reaction
+    %li= @reflection.week
+
   %ul.controls
     %li= link_to 'Edit', edit_reflection_path(@reflection)
     %li= link_to 'Destroy', @reflection, method: :delete, data: { confirm: 'Are you sure?' }
