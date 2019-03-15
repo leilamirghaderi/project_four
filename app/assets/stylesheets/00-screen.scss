@@ -97,3 +97,32 @@ p {
   font-size: px-to-em(22px);
 }
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
+ @media screen and (min-width: 380px) {
+  html {
+    margin: px-to-em(35px);
+  }
+}
+@media screen and (min-width: 540px) {
+ html {
+   margin: px-to-em(38px);
+ }
+}
+@media screen and (min-width: 920px) {
+  html {
+    margin: px-to-em(40px);
+    font-size: px-to-em(28px);
+  }
+  h1 {
+    font-size: px-to-em(40px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    margin: px-to-em(48px);
+    font-size: px-to-em(28px);
+  }
+  h1 {
+    font-size: px-to-em(40px);
+  }
+}
