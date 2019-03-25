@@ -7,14 +7,18 @@ class ReflectionsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit reflections_url
-    assert_selector "h1", text: "Reflections"
+    assert_selector "h1", text: "Latest reflections"
   end
 
   test "creating a Reflection" do
     visit reflections_url
     click_on "New Reflection"
 
-    click_on "Create Reflection"
+    fill_in "Title", with: @reflection.title
+    fill_in "Reaction", with: @reflection.reaction
+    fill_in "Week", with: @reflection.week
+    fill_in "Student name", with: @reflection.student.name
+    click_on "Save"
 
     assert_text "Reflection was successfully created"
     click_on "Back"
@@ -24,7 +28,11 @@ class ReflectionsTest < ApplicationSystemTestCase
     visit reflections_url
     click_on "Edit", match: :first
 
-    click_on "Update Reflection"
+    fill_in "Title", with: @reflection.title
+    fill_in "Reaction", with: @reflection.reaction
+    fill_in "Week", with: @reflection.week
+    fill_in "Student name", with: @reflection.student.name
+    click_on "Save"
 
     assert_text "Reflection was successfully updated"
     click_on "Back"
