@@ -51,6 +51,7 @@ h3 {
   padding-bottom: px-to-em(15px);
   padding-left: px-to-em(15px);
 }
+
 ul {
   margin: px-to-em(15px);
   padding: px-to-em(5px);
@@ -59,16 +60,14 @@ ul {
 li {
   font-size: px-to-em(20px);
   line-height: px-to-em(30px, 20px);
-  display: inline-block;
   color: #D9B310;
   background-color: #333A56;
   border-radius: px-to-em(15px);
   margin: px-to-em(10px);
   padding-left: px-to-em(15px);
   padding-top: px-to-em(5px);
-  width: 100%;
-  box-sizing: border-box;
 }
+
 a {
   display: block;
   padding: px-to-em(5px, 10px);
@@ -106,6 +105,25 @@ p {
  html {
    margin: px-to-em(35px);
  }
+}
+ @media screen and (min-width: 675px) {
+  html {
+    margin: px-to-em(35px);
+  }
+  ul {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 0.3125em;
+  grid-template-columns: repeat(2, 49.5%);
+  grid-template-rows: repeat(1 , 99%);
+  }
+  ul.info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0.3125em;
+    grid-template-rows: repeat(3, 33.9%);
+    grid-template-columns: repeat(1 , 99%);
+  }
 }
 @media screen and (min-width: 920px) {
   html {
