@@ -57,6 +57,10 @@ ul {
   padding: px-to-em(5px);
   list-style: none;
 }
+ul.controls {
+  display: block;
+  padding-top: px-to-em(15px);
+}
 li {
   font-size: px-to-em(20px);
   line-height: px-to-em(30px, 20px);
@@ -74,9 +78,16 @@ a {
   text-decoration: none;
   color: #C5C1C0;
 }
+footer.main {
+  color: #333A56;
+}
 footer {
   font-size: px-to-em(15px);
   padding-top: px-to-em(35px);
+  color: #333A56;
+}
+footer a {
+  color: #333A56;
 }
 p {
   padding: px-to-em(25px, 25px);
@@ -111,11 +122,11 @@ p {
     margin: px-to-em(35px);
   }
   ul {
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 0.3125em;
-  grid-template-columns: repeat(2, 49.5%);
-  grid-template-rows: repeat(1 , 99%);
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 0.3125em;
+    grid-template-columns: repeat(2, 49.5%);
+    grid-template-rows: repeat(1 , 99%);
   }
   ul.info {
     display: grid;
@@ -123,6 +134,9 @@ p {
     grid-gap: 0.3125em;
     grid-template-rows: repeat(3, 33.9%);
     grid-template-columns: repeat(1 , 99%);
+  }
+  ul.controls {
+    display: inline-flex;
   }
 }
 @media screen and (min-width: 920px) {
