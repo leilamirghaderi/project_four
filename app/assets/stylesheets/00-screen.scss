@@ -51,7 +51,6 @@ h3 {
   padding-bottom: px-to-em(15px);
   padding-left: px-to-em(15px);
 }
-
 ul {
   margin: px-to-em(15px);
   padding: px-to-em(5px);
@@ -67,12 +66,14 @@ li {
   padding-left: px-to-em(15px);
   padding-top: px-to-em(5px);
 }
-
 a {
   display: block;
   padding: px-to-em(5px, 10px);
   text-decoration: none;
   color: #C5C1C0;
+}
+ul.controls a {
+  color: #ffffff;
 }
 footer {
   font-size: px-to-em(15px);
