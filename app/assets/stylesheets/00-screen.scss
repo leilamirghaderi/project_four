@@ -57,10 +57,6 @@ ul {
   padding: px-to-em(5px);
   list-style: none;
 }
-ul.controls {
-  display: block;
-  padding-top: px-to-em(15px);
-}
 li {
   font-size: px-to-em(20px);
   line-height: px-to-em(30px, 20px);
@@ -77,9 +73,6 @@ a {
   padding: px-to-em(5px, 10px);
   text-decoration: none;
   color: #C5C1C0;
-}
-footer.main {
-  color: #333A56;
 }
 footer {
   font-size: px-to-em(15px);
