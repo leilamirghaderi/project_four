@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_014722) do
+ActiveRecord::Schema.define(version: 2019_04_24_165526) do
 
   create_table "reflections", force: :cascade do |t|
     t.integer "week"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_03_03_014722) do
     t.datetime "updated_at", null: false
     t.integer "student_id"
     t.string "title"
+    t.string "related_links"
     t.index ["student_id"], name: "index_reflections_on_student_id"
   end
 
