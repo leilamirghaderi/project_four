@@ -8,6 +8,7 @@ class ReflectionTest < ActiveSupport::TestCase
      assert Reflection.errors[:title].any?
      assert Reflection.errors[:week].any?
      assert Reflection.errors[:student].any?
+     assert Reflection.errors[:related_links].any?
   end
 
   test "reflection responds to student_name getter" do
