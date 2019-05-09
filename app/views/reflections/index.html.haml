@@ -1,8 +1,15 @@
-
-
-%header
-  %p#notice= notice
+- if @reflections.blank?
+  %p There are not any reflections currently in the system.
+- else
   %h1 Latest reflections
+
+%header#header
+  %h1 Reflection Board
+  %p.tagline Your reflection is valuable.
+  - if current_user
+    %p.greeting= "Welcome, #{current_user.name}."
+
+  %p#notice= notice
   %p{:class => "code"}= link_to 'New Reflection', new_reflection_path
 
 %ul.reflections
