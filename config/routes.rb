@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+  get 'welcome/home'
+  get 'welcome/contact'
   get '/logout', to: 'sessions#logout', as: 'logout'
   get '/login', to: 'sessions#login', as: 'login'
 
