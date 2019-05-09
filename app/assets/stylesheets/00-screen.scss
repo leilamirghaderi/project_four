@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 // Site-wide variables
-$primary_color: #333A56;
+$primary_color: #fc4a1a;
 $base_font_size: 20px;
 $font-stack: Helvetica, sans-serif;
 // Site-wide function
@@ -29,7 +29,7 @@ html {
   font-size: px-to-em($base_font_size,16px); /* 20 / 16 = 1.25 */
   color: $primary_color;
   line-height: px-to-em(24px);
-  background-color: #D9B310;
+  background-color: #347f77;
   font: 100% $font-stack;
   margin: px-to-em(10px);
 }
@@ -46,7 +46,7 @@ h3 {
   font-size: px-to-em(22px);
   line-height: px-to-em(22px, 25px);
   font-weight: bold;
-  color: #333A56;
+  color: #fc4a1a;
   padding-top: px-to-em(15px);
   padding-bottom: px-to-em(15px);
   padding-left: px-to-em(15px);
@@ -59,8 +59,8 @@ ul {
 li {
   font-size: px-to-em(20px);
   line-height: px-to-em(30px, 20px);
-  color: #D9B310;
-  background-color: #333A56;
+  color: #515050;
+  background-color: #cc9c3b;
   border-radius: px-to-em(15px);
   margin: px-to-em(10px);
   padding-left: px-to-em(15px);
@@ -70,7 +70,7 @@ a {
   display: block;
   padding: px-to-em(5px, 10px);
   text-decoration: none;
-  color: #C5C1C0;
+  color: #ffffff;
 }
 ul.controls a {
   color: #ffffff;
@@ -78,10 +78,10 @@ ul.controls a {
 footer {
   font-size: px-to-em(15px);
   padding-top: px-to-em(35px);
-  color: #333A56;
+  color: #ffffff;
 }
 footer a {
-  color: #333A56;
+  color: #ffffff;
 }
 p {
   padding: px-to-em(25px, 25px);
