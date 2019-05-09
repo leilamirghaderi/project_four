@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
     def authenticate_user
       unless user_signed_in?
-        redirect_to google_oauth2_url(origin: request.url)
+        redirect_to google_oauth2_auth_url(origin: request.url)
       end
     end
   end
