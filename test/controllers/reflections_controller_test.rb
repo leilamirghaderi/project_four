@@ -21,7 +21,6 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
       post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, @reflection.related_links } }
     end
     assert_equal(Reflection.last.student,students(:leila))
-    assert Reflection.last.photo.attached?
     assert_redirected_to reflection_url(Reflection.last)
   end
 
