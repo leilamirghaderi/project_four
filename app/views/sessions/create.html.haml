@@ -1,2 +1,17 @@
-%h1 Sessions#create
-%p Find me in app/views/sessions/create.html.haml
+%h1 Let's Create a New student (Eventually)
+
+%p.greeting= "Hello, #{current_user.name}!"
+
+%h2 student Info
+%ul
+  %li
+    %b Name
+    = @student.name
+  %li
+    %b Email
+    = @student.email
+  %li
+    %b Username
+    = @student.nickname
+
+%h2= link_to 'Log Out', logout_url

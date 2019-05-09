@@ -1,0 +1,4 @@
+- if flash[:notice]
+  %p.notice= flash[:notice]
+
+%h2.login= link_to 'Click to Log In with Google', google_oauth2_auth_url
