@@ -66,6 +66,14 @@ li {
   padding-left: px-to-em(15px);
   padding-top: px-to-em(5px);
 }
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #cc9c3b;
+  border-radius: px-to-em(15px);
+  margin: px-to-em(10px);
+}
 a {
   display: block;
   padding: px-to-em(5px, 10px);
