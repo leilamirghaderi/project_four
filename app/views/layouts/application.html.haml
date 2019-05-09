@@ -10,9 +10,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     %header#header
-
       = link_to "Home", root_path
-      = link_to "Contact", root_path
+      = link_to "Contact", welcome_contact_path
       = link_to 'Log out', logout_url
       %h1 Reflection Board
       %p.tagline Your reflection is valuable.
