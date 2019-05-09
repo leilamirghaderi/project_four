@@ -1,8 +1,11 @@
 
+%header#header
+  %h1 Reflection Board
+  %p.tagline Your reflection is valuable.
+  - if current_user
+    %p.greeting= "Welcome, #{current_user.name}."
 
-%header
   %p#notice= notice
-  %h1 Latest reflections
   %p{:class => "code"}= link_to 'New Reflection', new_reflection_path
 
 %ul.reflections
