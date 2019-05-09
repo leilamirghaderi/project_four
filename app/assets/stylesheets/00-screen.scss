@@ -9,7 +9,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 // Site-wide variables
-$primary_color: #fc4a1a;
+$primary_color: #ffffff;
 $base_font_size: 20px;
 $font-stack: Helvetica, sans-serif;
 // Site-wide function
@@ -33,23 +33,47 @@ html {
   font: 100% $font-stack;
   margin: px-to-em(10px);
 }
-h2 {
-  padding-left: px-to-em(25px);
+header {
+  margin-bottom: 1.5em;
 }
 h1 {
   font-size: px-to-em(35px);
   line-height: px-to-em(38px, 35px);
-  padding: px-to-em(10px);
   font-weight: bold;
+  margin: 1em;
+}
+h2 {
+  padding-left: px-to-em(25px);
+}
+h2.login {
+  margin: px-to-em(15px);
+  background-color: #cc9c3b;
+  border-radius: px-to-em(15px);
+  color: #76323F;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
 }
 h3 {
   font-size: px-to-em(22px);
   line-height: px-to-em(22px, 25px);
   font-weight: bold;
-  color: #fc4a1a;
-  padding-top: px-to-em(15px);
-  padding-bottom: px-to-em(15px);
-  padding-left: px-to-em(15px);
+  color: #a03348;
+  margin: 2em;
+}
+h4 {
+  font-size: px-to-em(25px);
+  font-weight: bold;
+  background-color: #cc9c3b;
+  border-radius: px-to-em(10px);
+  padding: px-to-em(5px, 15px);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 1em;
 }
 ul {
   margin: px-to-em(15px);
@@ -84,6 +108,7 @@ ul.controls a {
   color: #ffffff;
 }
 footer {
+  margin: px-to-em(15px);
   font-size: px-to-em(15px);
   padding-top: px-to-em(35px);
   color: #ffffff;
@@ -95,17 +120,25 @@ p {
   padding: px-to-em(25px, 25px);
 }
 
-
 /* Layout Styles (Usually Landmark ID Selectors) */
 
 /* Modular Styles (Repeating Class Selectors) */
 .code a {
-  color: #76323F;
   font-size: px-to-em(30px);
   font-weight: bold;
+  background-color: #cc9c3b;
+  border-radius: px-to-em(15px);
+  color: #76323F;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.4em;
 }
-.tagline{
-  margin-left: px-to-em(5px);
+.tagline, .greeting{
+  margin-left: 1em;
   font-size: px-to-em(20px);
 }
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
