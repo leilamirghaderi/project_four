@@ -1,7 +1,7 @@
 class ReflectionsController < ApplicationController
   before_action :set_reflection, only: [:show, :edit, :update, :destroy]
-
-  # GET /reflections
+  before_action :authenticate_user, except: [:index, :show]
+  before_action :user_owns_reflection?, only: [:edit, :update, :destroy]
   # GET /reflections.json
   def index
     @reflections = Reflection.all
@@ -25,7 +25,7 @@ class ReflectionsController < ApplicationController
   # POST /reflections.json
   def create
     @reflection = Reflection.new(reflection_params)
-
+    @reflection.student = current_user
     respond_to do |format|
       if @reflection.save
         format.html { redirect_to @reflection, notice: 'Reflection was successfully created.' }
@@ -69,6 +69,14 @@ class ReflectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reflection_params
-      params.require(:reflection).permit(:week, :title,  :reaction, :related_links, :student_name)
+      params.require(:reflection).permit(:week, :title, :reaction, :related_links )
+    end
+
+    # Making sure users can only edit, destroy their own posts
+    def user_owns_reflection?
+      unless @reflection.student.uid == current_user.uid
+        flash[:notice] = 'You may only edit your own reflections.'
+        redirect_to reflections_url
+      end
     end
 end
