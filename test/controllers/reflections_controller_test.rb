@@ -2,7 +2,8 @@ require 'test_helper'
 
 class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @reflection = reflections(:one)
+    @reflection = reflections(:good_reflection)
+    login_with('google_oauth2')
   end
 
   test "should get index" do
@@ -17,9 +18,10 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create reflection" do
     assert_difference('Reflection.count') do
-      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, related_links: @reflection.related_links, student_name: @reflection.student.name } }
+      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, @reflection.related_links } }
     end
-
+    assert_equal(Reflection.last.student,students(:leila))
+    assert Reflection.last.photo.attached?
     assert_redirected_to reflection_url(Reflection.last)
   end
 
@@ -34,7 +36,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update reflection" do
-    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, related_links: @reflection.related_links, student_name: @reflection.student.name } }
+    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, @reflection.related_links } }
     assert_redirected_to reflection_url(@reflection)
   end
 
